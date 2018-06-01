@@ -1,0 +1,9 @@
+n = int(input())
+m = int(input())
+while(m >= n):
+    if(n % 2 == 0): #n % 2 == 0, isso acontece apenas com numeros pares
+        n += 1
+        continue
+    else:
+        print(n) #Porem, so "printamos" quando ele eh um impar
+        n += 1
