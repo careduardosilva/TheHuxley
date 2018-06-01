@@ -1,0 +1,16 @@
+#"FOR" solution problem
+#Solucao usando for's, o custo de desempenho e maior
+#Inicializacao+
+num1 = int(input())
+num2 = int(input())
+sum_numbers = 0
+if(num2 >= 0): #Exemplo de caso: 2,4 
+    for i in range(num1,num2+1): #Itera ate num2 e soma apenas se i for maior positivo
+        if(i >= 0):
+            sum_numbers += i
+else: #Exemplo de caso: 2,-4
+    for i in range(num2,num1+1): #Itera ate num1 e soma apenas se i for maior positivo
+          if(i >= 0):
+            sum_numbers += i
+print(sum_numbers)
+#O(n)
