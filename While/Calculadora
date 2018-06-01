@@ -1,0 +1,22 @@
+#Inicializa
+n = 0
+aux = 0
+x = float(input())
+operators= { "+":lambda x, y: x + y, 
+             "-":lambda x, y: x - y,
+             "*":lambda x, y: x * y,
+             "/":lambda x, y: x / y,}
+while(True):
+    try: #Error handling
+        y = float (input())
+        operating = input()
+        if(operating in operators): #Verifica se o operating eh valido
+            result = operators[operating] #Obtem o value do dicionario
+            aux = result(x,y) #Guarda-o na variavel aux
+            x = aux #Esse comando, permite que sempre usemos o valor antigo para fazermos novas operacoes
+            print("%.3f"%aux)
+            continue #Interrompe laco e repete
+        else:
+            break
+    except ZeroDivisionError: #Caso seja retornado o ZeroDivisionError
+        print("operacao nao pode ser realizada")
