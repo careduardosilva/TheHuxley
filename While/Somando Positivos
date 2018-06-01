@@ -1,21 +1,25 @@
+#Inicializacao
 num1 = int(input())
 num2 = int(input())
 sum_numbers = 0
-if(num2 >= 0):
-    i = num1
-    while(i <= num2):
+if(num2 >= 0): 
+    i = num1 #Atribui num1 para i
+#Aqui ele vai iterar ate num2 e so vai somar quando i for positivo
+    while(i <= num2): #Assim, comecamos a contar a partir de num2 
         if(i >= 0):
             sum_numbers += i
             i += 1
-            continue
+            continue #Interrompe o laco e o repete, a fim de evitar que seja somado i += 1 duas vezes
         i += 1
     print(sum_numbers)
 else:
+#O mesmo que acima acontece aqui, mudando apenas o fator de contagem para num1
     i = num2
-    while(i <= num1):
+    while(i <= num1): #Vai iterar ate i chegar a num1
         if(i >= 0):
             sum_numbers += i
             i += 1
             continue
         i += 1
     print(sum_numbers)
+#O(log n)
