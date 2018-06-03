@@ -1,0 +1,21 @@
+#Inicializacao
+string = input()
+n = int(string.split()[0]) #Aqui setamos n para o valor do indice 0 da lista (string)
+m = int(string.split()[1])
+i = n
+start = 0
+end = 0
+while(i <= m): #Procuramos dentro das possibilidades o primeiro e o ultimo numero.
+    if(i%5 == 0 and start == 0): #Usamos start == 0, para certificarmos que estamos no primeiro numero.
+        start = i
+    if(i%5 == 0):
+        end = i #end sera o ultimo numero
+    i  += 1
+i = start
+while(i <= end): #Iteramos do primeiro ate o ultimo numero
+    if(i%5==0):
+        if(i==end): #Se i estiver no ultimo numero, o final da string sera "", um carater nulo \0
+            print("%d"%i,end="")
+        else: #Caso contrario, adicionamos o |
+            print("%d"%i,end="|")
+    i += 1
