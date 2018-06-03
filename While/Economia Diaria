@@ -1,0 +1,17 @@
+#Inicializa
+i = 0
+cumpriu = 0
+aux = float(input()) #Esse daqui sera o valor anterior e x sera sempre o proximo valor
+soma = aux
+while(True): #Itera ate i = 6, ja que nao precisamos iterar mais uma vez, afinal ja temos o primeiro input que eh o aux
+    if(i != 6): 
+        x = float(input())
+        soma += x
+        if(x >= aux+0.50): #De acordo com o exemplo, ela cumpre a meta, se o valor depositado for maior ou igual ao do dia anterior+0.50
+            cumpriu += 1
+        aux = x #Aqui setamos o valor de aux para o de x, na proxima iteracao aux sera considerado o valor anterior
+    else: #Daqui pra baixo dispensa comentarios
+        break
+    i += 1
+
+print("R$ %.2f\n%d"%(soma,cumpriu))
