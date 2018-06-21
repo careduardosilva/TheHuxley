@@ -1,14 +1,15 @@
 def ADD(OP1,OP2,variables):
     try:
         OP1 = int(OP1)
-        OP2 = int(OP2)
-        variables["R9"] = OP1 + OP2
     except ValueError:
         if(isinstance(OP1,str)):
             OP1 = variables[OP1]
+    try:
+        OP2 = int(OP2)
+    except ValueError:
         if(isinstance(OP2,str)):
             OP2 = variables[OP2]
-        variables["R9"] = OP1 + OP2
+    variables["R9"] = OP1 + OP2
     return variables["R9"]
 def SUB(OP1,OP2):
     return int(OP1) - int(OP2)
