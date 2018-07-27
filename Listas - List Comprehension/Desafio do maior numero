@@ -1,0 +1,9 @@
+#Utilizando funções especiais para listas do python podemos resolver em uma unica linha
+numbers = max(map(int,input().split()))
+print(numbers)
+#Utilizamos a funcao map e max do python
+#A funcao map, como seu nome, ela mapeia todos os elementos de uma lista com alguma funcao dada.
+#Em outras palavras, a funcao map aplica a funcao que estiver no seu primeiro parametro em todos os elementos de uma lista.
+#No caso acima, map(int,input().split()), temos que o input().split(), retorna uma lista de valores
+#O int no primeiro parametro aplica uma conversao de string para int em todos os elementos da lista dada.
+#Tendo feito isso, basta usarmos a funcao "max" do python, que retorna o maior valor de uma lista.
