@@ -2,7 +2,6 @@ while(True):
     entrada = input().split()
     dic_strings = {}
     lista_strings = []
-    strings = []
     n = int(entrada[0])
     m = int(entrada[1])
     if(n != 0 and m != 0):
